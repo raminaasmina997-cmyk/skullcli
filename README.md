@@ -26,6 +26,24 @@ skullcli serve <port>
 
 Then, open your browser and navigate to `http://localhost:<port>` to explore the dashboard.
 
+## Commands
+
+### `serve [port]`
+
+Starts the frontend and backend servers. You can optionally specify a port for the frontend server.
+
+### `update`
+
+Updates `skullcli` to the latest version.
+
+### `version`
+
+You can check your `skullcli` version using the `-v` or `--version` flags.
+
+```bash
+skullcli -v
+```
+
 ## Development
 
 To develop `skullcli`:
