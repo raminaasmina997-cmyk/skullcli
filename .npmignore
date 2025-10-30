@@ -1,0 +1,20 @@
+# Ignore unnecessary files from the root
+node_modules
+npm-debug.log
+*.log
+
+# Ignore client source files, we only need the build output
+client/node_modules
+client/public
+client/src
+client/.eslintrc.cjs
+client/index.html
+client/package.json
+client/package-lock.json
+client/postcss.config.js
+client/README.md
+client/tailwind.config.js
+client/vite.config.js
+
+# But DO include the built client app!
+!client/dist

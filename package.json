@@ -1,0 +1,29 @@
+{
+  "name": "skullcli",
+  "version": "1.1.1",
+  "description": "A simple CLI that serves JSON hello over HTTP.",
+  "type": "module",
+  "main": "dist/server.js",
+  "bin": {
+    "skullcli": "./dist/server.js"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && cd client && npm install && npm run build && cd .. && mkdir -p dist/public && cp server.js dist/ && cp -r client/dist/* dist/public/",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "keywords": [
+    "cli",
+    "http",
+    "server",
+    "json"
+  ],
+  "author": "TonNom",
+  "license": "MIT"
+}
