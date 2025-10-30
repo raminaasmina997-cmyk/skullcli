@@ -21,10 +21,10 @@ npm install -g skullcli
 To start the server, run the following command. You can specify any port you like.
 
 ```bash
-skullcli serve 6890
+skullcli serve <port>
 ```
 
-Then, open your browser and navigate to `http://localhost:6890` to see the dashboard.
+Then, open your browser and navigate to `http://localhost:<port>` to explore the dashboard.
 
 ## Development
 
