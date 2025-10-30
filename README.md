@@ -35,3 +35,13 @@ To develop `skullcli`:
 3.  Run `npm install` in the `client` directory.
 4.  Make your changes.
 5.  Before publishing, run `npm run build` to create the production build of the React app.
+
+## Backend API
+
+You can interact with the backend server using `curl`. The backend runs on port `3001` by default (or `port + 1` if you specify a port).
+
+Here's an example of how to execute a command:
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"command": "ls -al"}' http://localhost:3001/execute
+```
