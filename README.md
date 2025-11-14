@@ -40,6 +40,14 @@ Starts a WebSocket server. You can optionally specify a port, which defaults to 
 skullcli ws 8080
 ```
 
+### `url <someurl> [port]`
+
+Serves an iframe with the given URL. You can optionally specify a port, which defaults to 3000.
+
+```bash
+skullcli url https://www.google.com 3000
+```
+
 ### `update`
 
 Updates `skullcli` to the latest version.

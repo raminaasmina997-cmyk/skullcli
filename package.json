@@ -28,5 +28,8 @@
     "json"
   ],
   "author": "TonNom",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.0.0"
+  }
 }

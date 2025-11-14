@@ -97,4 +97,47 @@ program
     startWebSocketServer(port);
   });
 
+program
+    .command('url <someurl>')
+    .description('Serves an iframe with the given URL')
+    .argument('[port]', 'Port to run the server on', 3000)
+    .action((someurl, portStr) => {
+        const port = parseInt(portStr, 10);
+        const app = express();
+
+        app.get('/', (req, res) => {
+            res.send(`
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>SkullCLI URL</title>
+                    <style>
+                        body, html {
+                            margin: 0;
+                            padding: 0;
+                            height: 100%;
+                            overflow: hidden;
+                        }
+                        iframe {
+                            width: 100%;
+                            height: 100%;
+                            border: none;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <iframe src="${someurl}"></iframe>
+                </body>
+                </html>
+            `);
+        });
+
+        app.listen(port, () => {
+            console.log(`🚀 URL server running on http://localhost:${port}`);
+        });
+    });
+
+
 program.parse(process.argv);
