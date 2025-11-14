@@ -32,6 +32,14 @@ Then, open your browser and navigate to `http://localhost:<port>` to explore the
 
 Starts the frontend and backend servers. You can optionally specify a port for the frontend server.
 
+### `ws [port]`
+
+Starts a WebSocket server. You can optionally specify a port, which defaults to 8080.
+
+```bash
+skullcli ws 8080
+```
+
 ### `update`
 
 Updates `skullcli` to the latest version.
@@ -53,6 +61,18 @@ To develop `skullcli`:
 3.  Run `npm install` in the `client` directory.
 4.  Make your changes.
 5.  Before publishing, run `npm run build` to create the production build of the React app.
+
+## Publishing
+
+To publish a new version of `skullcli` to npm:
+
+1.  **Update the Version:** Manually increment the `version` number in `package.json` following semantic versioning.
+2.  **Document Changes:** Update this `README.md` and any other relevant documentation with details about the new features or fixes.
+3.  **Publish:** Run the `npm publish` command. The `prepublishOnly` script will automatically build the project before publishing.
+
+```bash
+npm publish
+```
 
 ## Backend API
 

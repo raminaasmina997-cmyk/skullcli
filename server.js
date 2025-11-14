@@ -86,4 +86,15 @@ program
     }).stdout.pipe(process.stdout);
   });
 
+import { startWebSocketServer } from './ws.js';
+
+program
+  .command('ws')
+  .description('Start a WebSocket server')
+  .argument('[port]', 'Port to run the WebSocket server on', 8080)
+  .action((portStr) => {
+    const port = parseInt(portStr, 10);
+    startWebSocketServer(port);
+  });
+
 program.parse(process.argv);
