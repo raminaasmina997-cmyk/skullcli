@@ -68,7 +68,11 @@ To develop `skullcli`:
 2.  Run `npm install` in the root directory.
 3.  Run `npm install` in the `client` directory.
 4.  Make your changes.
-5.  Before publishing, run `npm run build` to create the production build of the React app.
+5.  To test the local build directly, you can run:
+    ```bash
+    $(which node) dist/server.js url https://www.google.com 3000
+    ```
+6.  Before publishing, run `npm run build` to create the production build of the React app.
 
 ## Publishing
 
