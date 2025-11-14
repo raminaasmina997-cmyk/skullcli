@@ -78,7 +78,7 @@ To develop `skullcli`:
 
 To publish a new version of `skullcli` to npm:
 
-1.  **Update the Version:** Manually increment the `version` number in `package.json` following semantic versioning.
+1.  **Update the Version:** Use `npm version patch` to increment the version number.
 2.  **Document Changes:** Update this `README.md` and any other relevant documentation with details about the new features or fixes.
 3.  **Publish:** Run the `npm publish` command. The `prepublishOnly` script will automatically build the project before publishing.
 
